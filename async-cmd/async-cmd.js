@@ -7,7 +7,7 @@ const { promisify } = require('util');
  * @param exec
  * @returns {Promise}
  */
-const asyncCmd = async exec => {
+const asyncCmd = async (exec) => {
   try {
     const getAsync = promisify(cmd.get);
     const result = await getAsync(exec);
